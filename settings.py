@@ -155,6 +155,6 @@ elements = {
     'q': Element('Q', 'Курилий', 124, RED),
     'r': Element('R', 'Ремений', 125, BLUE),
     't': Element('T', 'Тесаковий', 126, BEIGE),
-    'x': Element('X', 'Хуиний', 127, GREEN),
+    'x': Element('X', '小老鼠', 127, GREEN),
     'z': Element('Z', 'Зелений', 128, ORANGE),
 }

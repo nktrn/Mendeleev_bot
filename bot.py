@@ -1,12 +1,27 @@
 import telebot
-from parser import split, make_jpg
-import TextCheck
-from analytics import incoming
+import requests
+import threading
+import time
 import os
-
+import TextCheck
+from parser import split, make_jpg
+from analytics import incoming
 
 TOKEN = os.environ["TOKEN"]
 bot = telebot.TeleBot(TOKEN)
+
+id_chat = os.environ["CHAT_ID"]
+
+
+def req():
+    while True:
+        requests.get('https://api.telegram.org/bot' + TOKEN + '/sendMessage?chat_id=' + str(id_chat) + '&text=x')
+        time.sleep(1500)
+
+
+ping = threading.Thread(target=req)
+ping.start()
+
 
 
 @bot.message_handler(commands=['start'])
