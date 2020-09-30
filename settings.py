@@ -4,6 +4,9 @@ from mendeleev_element import Element
 WIDTH = 180
 HEIGHT = 200
 
+# bot url
+URL = '@MendeleevText_bot'
+
 # colors
 GREEN = (65, 195, 159)
 ORANGE = (234, 135, 78)
@@ -23,10 +26,12 @@ FONT_URL_BOLD = 'font/Roboto-Bold.ttf'
 FONT_INDEX_SIZE = 30
 FONT_NAME_SIZE = 70
 FONT_FULLNAME_SIZE = 17
+FONT_BOT_URL_SIZE = 10
 
 # offset
 OFFSET = 2
 
+# Mendeleev elements
 elements = {
     'h': Element('H', 'Водовород', 1, ORANGE),
     'c': Element('C', 'Углерод', 6, ORANGE),
@@ -140,16 +145,16 @@ elements = {
     'fm': Element('Fm', 'Фермий', 100, RED),
     'md': Element('Md', 'Менделевий', 101, RED),
     'no': Element('No', 'Нобелий', 102, RED),
-    'a': Element('A', 'Апаровий', 117, RED),
-    'd': Element('D', 'Дамний', 118, RED),
-    'e': Element('E', 'Евклидий', 119, RED),
-    'g': Element('G', 'Гетельманий', 120, RED),
-    'j': Element('J', 'Жорий', 121, RED),
-    'l': Element('L', 'Любовий', 122, RED),
+    'a': Element('A', 'Апаровий', 117, ORANGE),
+    'd': Element('D', 'Дамний', 118, PURPLE),
+    'e': Element('E', 'Евклидий', 119, DARKBLUE),
+    'g': Element('G', 'Гетельманий', 120, DARKPURPLE),
+    'j': Element('J', 'Жорий', 121, GREEN),
+    'l': Element('L', 'Любовий', 122, LIGHTGREEN),
     'm': Element('M', 'Марсианий', 123, RED),
     'q': Element('Q', 'Курилий', 124, RED),
-    'r': Element('R', 'Ремений', 125, RED),
-    't': Element('T', 'Тесаковий', 126, RED),
-    'x': Element('X', 'Хуиний', 127, RED),
-    'z': Element('Z', 'Зелений', 128, RED),
+    'r': Element('R', 'Ремений', 125, BLUE),
+    't': Element('T', 'Тесаковий', 126, BEIGE),
+    'x': Element('X', 'Хуиний', 127, GREEN),
+    'z': Element('Z', 'Зелений', 128, ORANGE),
 }

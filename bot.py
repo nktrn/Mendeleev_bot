@@ -1,6 +1,7 @@
 import telebot
-from parser import Generate
+from parser import split, make_jpg
 import TextCheck
+from analytics import incoming
 import os
 
 
@@ -23,10 +24,11 @@ def help_message(message):
 @bot.message_handler(content_types=['text'])
 def send_mend_photo(message):
     if TextCheck.check_en(message.text):
-        mendeleev = Generate(word=message.text, user_id=message.from_user.first_name)
-        mendeleev.split()
-        img = mendeleev.make_jpg()
+        imgs = split(message.text)
+        img = make_jpg(imgs)
         bot.send_photo(message.chat.id, img)
+        incoming(message.text, message.chat.id, message.chat.username)
+
     else:
         bot.send_message(message.chat.id, 'Пожалуйста, введите только одно слово на английском языке')
 
